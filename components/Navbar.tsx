@@ -64,7 +64,7 @@ export const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-10 font-sans font-semibold text-foreground">
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-10 font-sans font-semibold text-foreground">
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.substring(1);
             return (
@@ -88,13 +88,13 @@ export const Navbar = () => {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Link href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2IeIsn89ZwrzAlQV0dnwjgUe7ZbIphty-0fC8xEzR2MOWpk3P4_lfCMyzKUU-EsGYuec7Zxqaf" target='blank' className="btn-gradient hidden md:flex items-center gap-2 text-sm px-5 py-2.5 shadow-md hover:shadow-lg">
+          <Link href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2IeIsn89ZwrzAlQV0dnwjgUe7ZbIphty-0fC8xEzR2MOWpk3P4_lfCMyzKUU-EsGYuec7Zxqaf" target='blank' className="btn-gradient hidden lg:flex items-center gap-2 text-sm px-5 py-2.5 shadow-md hover:shadow-lg">
             <CalendarDays className="w-4 h-4" /> Book Your Slot
           </Link>
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden p-2 text-foreground focus:outline-none"
+            className="lg:hidden p-2 text-foreground focus:outline-none"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
@@ -111,7 +111,7 @@ export const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden absolute top-full left-0 w-full bg-white border-b border-border shadow-xl py-4 px-4 flex flex-col gap-4"
+            className="lg:hidden absolute top-full left-0 w-full bg-white border-b border-border shadow-xl py-4 px-4 flex flex-col gap-4"
           >
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.substring(1);
