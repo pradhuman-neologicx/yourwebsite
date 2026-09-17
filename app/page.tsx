@@ -139,7 +139,7 @@ export default function Home() {
       </section>
 
       {/* The Reality (Pain Points) */}
-      <section id="reality" className="py-24 relative overflow-hidden bg-white">
+      <section id="reality" className="py-24 pt-10 relative overflow-hidden bg-white">
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-block bg-[#f8fafc] text-primary font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full mb-6 shadow-sm border border-border/50">
@@ -181,6 +181,91 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Who is this for */}
+      <section id="who" className="py-24 bg-[#f8fafc]">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
+
+            {/* Left Content */}
+            <div className="flex-1 w-full space-y-8">
+              <div>
+                <div className="inline-block bg-[#d2dce6] text-[#2c3e50] font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full mb-6">
+                  WHO IS THIS FOR
+                </div>
+                <h2 className="text-4xl md:text-5xl font-extrabold text-brand-dark tracking-tight leading-tight mb-4">
+                  Kya aap inme se koi <br className="hidden md:block" /> hain?
+                </h2>
+              </div>
+
+              <div className="space-y-4">
+                {[
+                  {
+                    icon: <Building2 className="w-8 h-8 text-primary" />,
+                    title: "New business owners",
+                    desc: "Just started? Let's set up your digital presence the right way from day one."
+                  },
+                  {
+                    icon: <Globe className="w-8 h-8 text-primary" />,
+                    title: "No website yet",
+                    desc: "Your business is real, but invisible online. It's time to fix that."
+                  },
+                  {
+                    icon: <BarChart className="w-8 h-8 text-primary" />,
+                    title: "Website that does nothing",
+                    desc: "You have a site, but it hasn't brought a single lead. We'll diagnose and revive it."
+                  },
+                  {
+                    icon: <Megaphone className="w-8 h-8 text-primary" />,
+                    title: "No promotion strategy",
+                    desc: "Posting randomly, boosting ads with no plan. Let's make your budget count."
+                  }
+                ].map((item, i) => (
+                  <div key={i} className="bg-white/60 backdrop-blur-sm rounded-3xl p-6 md:p-8 flex items-start gap-6 shadow-sm border border-border/40 hover:shadow-md transition-shadow">
+                    <div className="w-16 h-16 rounded-full border-2 border-primary bg-white flex items-center justify-center shrink-0 shadow-sm">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-brand-dark mb-2">{item.title}</h3>
+                      <p className="text-foreground/70 leading-relaxed font-medium">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right Image */}
+            <div className="flex-1 w-full relative h-full">
+              <div className="relative w-full aspect-[4/5] lg:aspect-[4/5] max-w-lg mx-auto lg:max-w-none">
+                {/* Main image container */}
+                <div className="absolute inset-0 rounded-[3rem] overflow-hidden bg-white shadow-2xl">
+                  {/* The cutout shape at the bottom right */}
+                  <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-[#f8fafc] rounded-tl-[3rem] z-20"></div>
+                  <Image
+                    src="/who_is_this_for.png"
+                    alt="Who is this for"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
+
+                {/* Overlapping badge */}
+                <div className="absolute -left-6 md:-left-12 top-1/2 -translate-y-1/2 w-40 h-40 md:w-48 md:h-48 bg-[#0a192f]/90 backdrop-blur-md rounded-full flex items-center justify-center border-[8px] border-[#f8fafc] z-30 shadow-2xl">
+                  <svg viewBox="0 0 100 100" className="absolute w-full h-full animate-[spin_20s_linear_infinite]">
+                    <path id="curve" fill="transparent" d="M 50, 50 m -32, 0 a 32,32 0 1,1 64,0 a 32,32 0 1,1 -64,0" />
+                    <text className="fill-white text-[10.27px] font-bold uppercase tracking-widest">
+                      <textPath href="#curve" startOffset="50%" textAnchor="middle">
+                        • Shaping the future of work
+                      </textPath>
+                    </text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
       {/* The Difference Section */}
       <section className="py-24 bg-[#f4f6f8] relative overflow-hidden">
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
@@ -274,93 +359,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Who is this for */}
-      <section id="who" className="py-24 bg-[#f8fafc]">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-
-            {/* Left Content */}
-            <div className="flex-1 w-full space-y-8">
-              <div>
-                <div className="inline-block bg-[#d2dce6] text-[#2c3e50] font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full mb-6">
-                  WHO IS THIS FOR
-                </div>
-                <h2 className="text-4xl md:text-5xl font-extrabold text-brand-dark tracking-tight leading-tight mb-4">
-                  Kya aap inme se koi <br className="hidden md:block" /> hain?
-                </h2>
-              </div>
-
-              <div className="space-y-4">
-                {[
-                  {
-                    icon: <Building2 className="w-8 h-8 text-primary" />,
-                    title: "New business owners",
-                    desc: "Just started? Let's set up your digital presence the right way from day one."
-                  },
-                  {
-                    icon: <Globe className="w-8 h-8 text-primary" />,
-                    title: "No website yet",
-                    desc: "Your business is real, but invisible online. It's time to fix that."
-                  },
-                  {
-                    icon: <BarChart className="w-8 h-8 text-primary" />,
-                    title: "Website that does nothing",
-                    desc: "You have a site, but it hasn't brought a single lead. We'll diagnose and revive it."
-                  },
-                  {
-                    icon: <Megaphone className="w-8 h-8 text-primary" />,
-                    title: "No promotion strategy",
-                    desc: "Posting randomly, boosting ads with no plan. Let's make your budget count."
-                  }
-                ].map((item, i) => (
-                  <div key={i} className="bg-white/60 backdrop-blur-sm rounded-3xl p-6 md:p-8 flex items-start gap-6 shadow-sm border border-border/40 hover:shadow-md transition-shadow">
-                    <div className="w-16 h-16 rounded-full border-2 border-primary bg-white flex items-center justify-center shrink-0 shadow-sm">
-                      {item.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-brand-dark mb-2">{item.title}</h3>
-                      <p className="text-foreground/70 leading-relaxed font-medium">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right Image */}
-            <div className="flex-1 w-full relative h-full">
-              <div className="relative w-full aspect-[4/5] lg:aspect-[4/5] max-w-lg mx-auto lg:max-w-none">
-                {/* Main image container */}
-                <div className="absolute inset-0 rounded-[3rem] overflow-hidden bg-white shadow-2xl">
-                  {/* The cutout shape at the bottom right */}
-                  <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-[#f8fafc] rounded-tl-[3rem] z-20"></div>
-                  <Image
-                    src="/who_is_this_for.png"
-                    alt="Who is this for"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                </div>
-
-                {/* Overlapping badge */}
-                <div className="absolute -left-6 md:-left-12 top-1/2 -translate-y-1/2 w-40 h-40 md:w-48 md:h-48 bg-[#0a192f]/90 backdrop-blur-md rounded-full flex items-center justify-center border-[8px] border-[#f8fafc] z-30 shadow-2xl">
-                  <svg viewBox="0 0 100 100" className="absolute w-full h-full animate-[spin_20s_linear_infinite]">
-                    <path id="curve" fill="transparent" d="M 50, 50 m -32, 0 a 32,32 0 1,1 64,0 a 32,32 0 1,1 -64,0" />
-                    <text className="fill-white text-[10.27px] font-bold uppercase tracking-widest">
-                      <textPath href="#curve" startOffset="50%" textAnchor="middle">
-                        • Shaping the future of work
-                      </textPath>
-                    </text>
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
       {/* Consultation */}
-      <section className="py-24 pb-1">
+      <section className="py-24">
         <div className="container mx-auto px-4 ">
           <div className="bg-gradient-to-br from-[#f8fafc] to-[#e2e8f0] rounded-[3rem] p-10 md:p-16 lg:p-20 relative overflow-hidden shadow-sm border border-white/60 flex flex-col lg:flex-row items-center gap-16">
 
@@ -409,76 +409,6 @@ export default function Home() {
               </motion.div>
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      {/* Process */}
-      <section id="process" className="py-24">
-        <div className="container mx-auto px-4 ">
-          <div className="bg-[#f4f6f8] bg-[url('/process.png')] bg-cover bg-right bg-no-repeat rounded-[2.5rem] p-8 md:p-12 lg:p-16 relative overflow-hidden flex flex-col lg:flex-row items-center border border-border/50 shadow-sm">
-
-            {/* Left Content */}
-            <div className="flex-1 space-y-8 z-10 w-full lg:max-w-[55%]">
-              <div className="inline-block bg-[#e2e8f0] text-brand-dark font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full shadow-sm">
-                Our Process
-              </div>
-              <div className="space-y-4">
-                <h2 className="text-4xl md:text-5xl font-bold text-brand-dark leading-tight tracking-tight">
-                  Hum kya karte hain, step by step
-                </h2>
-                <p className="text-lg text-foreground/70 max-w-lg leading-relaxed">
-                  No jargon. No guesswork. Just a clear path from consultation to compounding results.
-                </p>
-              </div>
-
-              {/* Grid of 4 Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
-                {[
-                  {
-                    icon: <ThumbsUp className="w-5 h-5 text-primary" />,
-                    title: "Free consultation",
-                    desc: "We understand your business, your customers, and your goals — no cost, no obligation."
-                  },
-                  {
-                    icon: <Target className="w-5 h-5 text-primary" />,
-                    title: "Define your TG",
-                    desc: "We map out exactly who your ideal customer is, where they are, and what they need to hear"
-                  },
-                  {
-                    icon: <TrendingUp className="w-5 h-5 text-primary" />,
-                    title: "Tweak & grow",
-                    desc: "We track, measure, and keep improving — because results don't happen once, they compound."
-                  },
-                  {
-                    icon: <Rocket className="w-5 h-5 text-primary" />,
-                    title: "Build & launch",
-                    desc: "Website designed for conversion, not just looks. Launched with a promotion plan in place."
-                  }
-                ].map((step, i) => (
-                  <motion.div
-                    key={i}
-                    className="bg-white p-6 rounded-2xl shadow-sm border border-border/40"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.1 }}
-                  >
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-full border-2 border-primary flex items-center justify-center shrink-0">
-                        {step.icon}
-                      </div>
-                      <h4 className="font-bold text-brand-dark">{step.title}</h4>
-                    </div>
-                    <p className="text-sm text-foreground/70 leading-relaxed">
-                      {step.desc}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right side is now handled by the background image on the container */}
           </div>
         </div>
       </section>
@@ -558,7 +488,7 @@ export default function Home() {
         </div>
       </section>
       {/* Pricing */}
-      <section id="pricing" className="py-24">
+      <section id="pricing" className="py-24 pb-10">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="text-primary font-bold tracking-wider uppercase text-sm mb-4">Our Offerings</div>
@@ -682,7 +612,75 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Process */}
+      <section id="process" className="py-24">
+        <div className="container mx-auto px-4 ">
+          <div className="bg-[#f4f6f8] bg-[url('/process.png')] bg-cover bg-right bg-no-repeat rounded-[2.5rem] p-8 md:p-12 lg:p-16 relative overflow-hidden flex flex-col lg:flex-row items-center border border-border/50 shadow-sm">
 
+            {/* Left Content */}
+            <div className="flex-1 space-y-8 z-10 w-full lg:max-w-[55%]">
+              <div className="inline-block bg-[#e2e8f0] text-brand-dark font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full shadow-sm">
+                Our Process
+              </div>
+              <div className="space-y-4">
+                <h2 className="text-4xl md:text-5xl font-bold text-brand-dark leading-tight tracking-tight">
+                  Hum kya karte hain, step by step
+                </h2>
+                <p className="text-lg text-foreground/70 max-w-lg leading-relaxed">
+                  No jargon. No guesswork. Just a clear path from consultation to compounding results.
+                </p>
+              </div>
+
+              {/* Grid of 4 Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
+                {[
+                  {
+                    icon: <ThumbsUp className="w-5 h-5 text-primary" />,
+                    title: "Free consultation",
+                    desc: "We understand your business, your customers, and your goals — no cost, no obligation."
+                  },
+                  {
+                    icon: <Target className="w-5 h-5 text-primary" />,
+                    title: "Define your TG",
+                    desc: "We map out exactly who your ideal customer is, where they are, and what they need to hear"
+                  },
+                  {
+                    icon: <TrendingUp className="w-5 h-5 text-primary" />,
+                    title: "Tweak & grow",
+                    desc: "We track, measure, and keep improving — because results don't happen once, they compound."
+                  },
+                  {
+                    icon: <Rocket className="w-5 h-5 text-primary" />,
+                    title: "Build & launch",
+                    desc: "Website designed for conversion, not just looks. Launched with a promotion plan in place."
+                  }
+                ].map((step, i) => (
+                  <motion.div
+                    key={i}
+                    className="bg-white p-6 rounded-2xl shadow-sm border border-border/40"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                  >
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-full border-2 border-primary flex items-center justify-center shrink-0">
+                        {step.icon}
+                      </div>
+                      <h4 className="font-bold text-brand-dark">{step.title}</h4>
+                    </div>
+                    <p className="text-sm text-foreground/70 leading-relaxed">
+                      {step.desc}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right side is now handled by the background image on the container */}
+          </div>
+        </div>
+      </section>
       {/* FAQ */}
       <section id="faq" className="py-24 bg-[#f4f6f8]">
         <div className="container mx-auto px-4 max-w-7xl">
