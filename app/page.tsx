@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { EyeOff, Target, Megaphone, Clock, CheckCircle2, XCircle, ChevronDown, X, Check, ThumbsUp, TrendingUp, Rocket, Building2, Globe, BarChart } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -27,7 +27,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-background text-foreground overflow-hidden">
 
       {/* Hero Section */}
-      <section className="relative pt-24 pb-32 overflow-hidden">
+      <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-30">
           <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-primary/20 blur-[100px]" />
           <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] rounded-full bg-secondary/30 blur-[100px]" />
@@ -138,6 +138,142 @@ export default function Home() {
         </div>
       </section>
 
+      {/* The Reality (Pain Points) */}
+      <section id="reality" className="py-24 relative overflow-hidden bg-white">
+        <div className="container mx-auto px-4 max-w-7xl relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-block bg-[#f8fafc] text-primary font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full mb-6 shadow-sm border border-border/50">
+              For growing businesses in India
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-brand-dark mb-6 tracking-tight">
+              Sirf website banana kaafi nahi hai
+            </h2>
+            <p className="text-lg text-foreground/80 font-medium">
+              A website with no strategy is like a showroom with no signboard, no address, and no lights on. Here&apos;s what most businesses are dealing with:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { icon: <EyeOff className="w-8 h-8 text-primary" />, title: 'No one can find you', text: "Your website isn't showing up on Google. Your potential customers are finding your competitors instead." },
+              { icon: <Target className="w-8 h-8 text-primary" />, title: 'Wrong audience', text: "Even visitors who do land on your site aren't your buyers — because the site wasn't built for your target." },
+              { icon: <Megaphone className="w-8 h-8 text-primary" />, title: 'No promotion plan', text: 'Random social media posts with no strategy. No consistency. No growth. Just posting and hoping.' },
+              { icon: <Clock className="w-8 h-8 text-primary" />, title: 'Set it and forget it', text: "Website was made once, never updated. Markets change, customers change — your site doesn't." },
+            ].map((item, i) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-[#f8fafc] rounded-3xl p-8 border border-border/60 hover:shadow-xl hover:border-primary/20 transition-all group"
+              >
+                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-sm border border-border/40 mb-6 group-hover:scale-110 transition-transform">
+                  {item.icon}
+                </div>
+                <h3 className="text-xl font-bold text-brand-dark mb-3">{item.title}</h3>
+                <p className="text-foreground/70 leading-relaxed font-medium text-sm">
+                  {item.text}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* The Difference Section */}
+      <section className="py-24 bg-[#f4f6f8] relative overflow-hidden">
+        <div className="container mx-auto px-4 max-w-7xl relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-block bg-[#f8fafc] text-primary font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full mb-6 shadow-sm border border-border/50">
+              Reality Check
+            </div>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-brand-dark mb-6 tracking-tight">
+              Kya aap bhi yahi soch rahe hain?
+            </h2>
+            <p className="text-lg text-foreground/70 font-medium leading-relaxed max-w-2xl mx-auto">
+              Most business owners we talk to face similar challenges when trying to grow their business. Which of these sounds most like your situation right now?
+            </p>
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-6 md:gap-12 max-w-5xl mx-auto">
+            {/* RIGHT NOW */}
+            <div className="flex-1">
+              <div className="inline-block bg-[#cbd5e1] text-[#334155] font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+                RIGHT NOW
+              </div>
+              <div className="space-y-4">
+                {[
+                  {
+                    title: '"I have a website..."',
+                    desc: "But no one visits it. It just sits there doing nothing."
+                  },
+                  {
+                    title: '"I posted on Instagram..."',
+                    desc: "Got a few likes from friends and family. Zero new customers."
+                  },
+                  {
+                    title: '"I paid an agency once..."',
+                    desc: "They sent a report full of numbers. Still no real results."
+                  },
+                  {
+                    title: '"I don\'t know where to start"',
+                    desc: "Google, SEO, Meta ads... It's overwhelming and confusing."
+                  }
+                ].map((item, i) => (
+                  <div key={i} className="bg-white rounded-3xl p-6 flex items-start gap-5 shadow-sm">
+                    <div className="w-14 h-14 rounded-full border-[3px] border-primary text-primary flex items-center justify-center shrink-0">
+                      <X className="w-6 h-6 stroke-[4]" />
+                    </div>
+                    <div className="pt-1">
+                      <h3 className="font-bold text-brand-dark text-lg mb-1">{item.title}</h3>
+                      <p className="text-foreground/70 text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* AFTER NEOLOGICX */}
+            <div className="flex-1 mt-10 md:mt-0">
+              <div className="inline-block bg-[#cbd5e1] text-[#334155] font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+                AFTER NEOLOGICX
+              </div>
+              <div className="space-y-4">
+                {[
+                  {
+                    title: 'A website that actually works',
+                    desc: "Visitors come, read, and contact you."
+                  },
+                  {
+                    title: 'Reach the right people',
+                    desc: "Your posts reach people who actually want what you offer."
+                  },
+                  {
+                    title: 'Results you can see',
+                    desc: "Leads, calls, messages — not just impressions and likes."
+                  },
+                  {
+                    title: 'A clear, simple plan',
+                    desc: "We handle the digital side. You focus on your business."
+                  }
+                ].map((item, i) => (
+                  <div key={i} className="bg-white rounded-3xl p-6 flex items-start gap-5 shadow-sm">
+                    <div className="w-14 h-14 rounded-full border-[3px] border-primary text-primary flex items-center justify-center shrink-0">
+                      <Check className="w-6 h-6 stroke-[4]" />
+                    </div>
+                    <div className="pt-1">
+                      <h3 className="font-bold text-brand-dark text-lg mb-1">{item.title}</h3>
+                      <p className="text-foreground/70 text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Who is this for */}
       <section id="who" className="py-24 bg-[#f8fafc]">
         <div className="container mx-auto px-4 max-w-7xl">
@@ -224,7 +360,7 @@ export default function Home() {
         </div>
       </section>
       {/* Consultation */}
-      <section className="py-24">
+      <section className="py-24 pb-1">
         <div className="container mx-auto px-4 ">
           <div className="bg-gradient-to-br from-[#f8fafc] to-[#e2e8f0] rounded-[3rem] p-10 md:p-16 lg:p-20 relative overflow-hidden shadow-sm border border-white/60 flex flex-col lg:flex-row items-center gap-16">
 
@@ -599,13 +735,23 @@ export default function Home() {
                     className="w-full px-6 py-6 text-left flex items-start justify-between font-bold text-lg md:text-xl hover:text-primary transition-colors text-brand-dark gap-4"
                   >
                     <span>{faq.question}</span>
-                    <ChevronDown className={`transform transition-transform shrink-0 mt-1 ${openFaq === i ? 'rotate-180 text-primary' : 'text-muted-foreground'}`} />
+                    <ChevronDown className={`transform transition-transform duration-300 shrink-0 mt-1 ${openFaq === i ? 'rotate-180 text-primary' : 'text-muted-foreground'}`} />
                   </button>
-                  {openFaq === i && (
-                    <div className="px-6 pb-6 text-foreground/80 leading-relaxed text-lg">
-                      {faq.answer}
-                    </div>
-                  )}
+                  <AnimatePresence>
+                    {openFaq === i && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <div className="px-6 pb-6 text-foreground/80 leading-relaxed text-lg">
+                          {faq.answer}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
               ))}
             </div>
