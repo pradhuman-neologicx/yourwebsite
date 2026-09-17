@@ -139,7 +139,7 @@ export default function Home() {
       </section>
 
       {/* The Reality (Pain Points) */}
-      <section id="reality" className="py-24 pt-10 relative overflow-hidden bg-white">
+      <section className="py-24 pt-10 relative overflow-hidden bg-white">
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-block bg-[#f8fafc] text-primary font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full mb-6 shadow-sm border border-border/50">
@@ -267,7 +267,7 @@ export default function Home() {
         </div>
       </section>
       {/* The Difference Section */}
-      <section className="py-24 bg-[#f4f6f8] relative overflow-hidden">
+      <section id="reality" className="py-24 bg-[#f4f6f8] relative overflow-hidden">
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-block bg-[#f8fafc] text-primary font-bold text-xs uppercase tracking-widest px-5 py-2 rounded-full mb-6 shadow-sm border border-border/50">
