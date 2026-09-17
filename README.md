@@ -1,6 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Neologicx Micro Website
 
-## Getting Started
+This is a micro website for **Neologicx**, a digital engineering and marketing agency dedicated to helping Indian businesses grow online. Built with a modern tech stack to ensure high performance, responsiveness, and a premium user experience.
+
+## 🚀 Tech Stack
+
+- **Framework**: [Next.js 15+](https://nextjs.org/) (App Router)
+- **Library**: [React 19](https://react.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+
+## ✨ Key Features
+
+- **Modern Glassmorphism UI**: Beautiful transparent overlays with blur effects.
+- **Fully Responsive**: Optimized for Mobile, Tablet, and Desktop displays.
+- **Dynamic Scroll-Spy Navigation**: The top Navbar dynamically highlights the active section as the user scrolls.
+- **Sticky Sidebar**: The Terms & Conditions page features a sticky Table of Contents that tracks with the content.
+- **Performance Optimized**: Built on Next.js App Router for optimal Server-Side Rendering (SSR) and fast load times.
+
+## 💻 Getting Started
 
 First, run the development server:
 
@@ -18,19 +36,18 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Project Structure
 
-## Learn More
+- `app/` - Contains all routes and layouts (App Router).
+  - `page.tsx` - The main landing page.
+  - `layout.tsx` - Global layout including the Footer.
+  - `terms-and-conditions/` - The Terms & Conditions page route.
+- `components/` - Reusable UI components.
+  - `Navbar.tsx` - The responsive, dynamic top navigation bar.
+- `public/` - Static assets like images and icons.
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new) from the creators of Next.js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
