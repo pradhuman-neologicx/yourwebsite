@@ -56,12 +56,12 @@ const Footer = () => (
         <div className="lg:col-span-3 lg:col-start-7 pt-2">
           <h4 className="font-bold text-base mb-6 tracking-wide">Useful links</h4>
           <nav className="flex flex-col gap-3.5 font-medium text-white/70 text-xs">
-            <Link href="/#faq" className="hover:text-primary transition-colors inline-block w-max">FAQs</Link>
-            <Link href="/#process" className="hover:text-primary transition-colors inline-block w-max">Our Process</Link>
-            <Link href="/#pricing" className="hover:text-primary transition-colors inline-block w-max">Pricing</Link>
-            <Link href="/#numbers" className="hover:text-primary transition-colors inline-block w-max">Results</Link>
             <Link href="/#reality" className="hover:text-primary transition-colors inline-block w-max">Reality Check</Link>
             <Link href="/#who" className="hover:text-primary transition-colors inline-block w-max">Who is this for</Link>
+            <Link href="/#numbers" className="hover:text-primary transition-colors inline-block w-max">Results</Link>
+            <Link href="/#pricing" className="hover:text-primary transition-colors inline-block w-max">Pricing</Link>
+            <Link href="/#process" className="hover:text-primary transition-colors inline-block w-max">Our Process</Link>
+            <Link href="/#faq" className="hover:text-primary transition-colors inline-block w-max">FAQs</Link>
             <Link href="/terms-and-conditions" className="hover:text-primary transition-colors inline-block w-max">Terms &amp; Conditions</Link>
           </nav>
         </div>

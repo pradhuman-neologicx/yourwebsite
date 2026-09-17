@@ -7,12 +7,10 @@ import { CalendarDays, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
-
   { name: 'Reality Check', href: '#reality' },
-  { name: 'Our Process', href: '#process' },
   { name: 'Results', href: '#numbers' },
   { name: 'Pricing', href: '#pricing' },
-
+  { name: 'Our Process', href: '#process' },
   { name: 'FAQs', href: '#faq' },
 ];
 
