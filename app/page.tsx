@@ -78,7 +78,7 @@ export default function Home() {
             transition={{ duration: 0.7, delay: 0.2 }}
           >
             <div className="bg-white rounded-3xl p-8 shadow-2xl shadow-primary/10 border border-border/30 relative">
-              <div className="absolute -top-4 -right-4 bg-primary text-white font-bold py-2 px-6 rounded-full shadow-lg transform rotate-3">
+              <div className="absolute -top-4 -right-4 bg-primary text-white font-bold py-2 px-6 rounded-full shadow-lg transform">
                 Digital Health Score
               </div>
               <div className="grid grid-cols-3 gap-3 mb-8 pt-4">
