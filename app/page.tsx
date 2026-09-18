@@ -52,10 +52,10 @@ export default function Home() {
               <strong> We fix that — with strategy, not just design.</strong>
             </motion.p>
             <motion.div variants={fadeIn} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <Link href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2IeIsn89ZwrzAlQV0dnwjgUe7ZbIphty-0fC8xEzR2MOWpk3P4_lfCMyzKUU-EsGYuec7Zxqaf" target='blank' className="btn-gradient w-full sm:w-auto text-center justify-center text-lg h-14 px-8">
+              <Link href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2IeIsn89ZwrzAlQV0dnwjgUe7ZbIphty-0fC8xEzR2MOWpk3P4_lfCMyzKUU-EsGYuec7Zxqaf" target='blank' className="btn-gradient inline-flex items-center gap-2 w-full sm:w-auto text-center justify-center text-lg h-14 px-8">
                 Book Free Consultation ↗
               </Link>
-              <Link href="#work" className="border-2 border-primary text-primary hover:bg-primary/5 font-semibold px-8 h-14 rounded-lg flex items-center justify-center transition-colors w-full sm:w-auto">
+              <Link href="#process" className="border-2 border-primary text-primary hover:bg-primary/5 font-semibold px-8 h-14 rounded-lg flex items-center justify-center transition-colors w-full sm:w-auto">
                 See How It Works ↗
               </Link>
             </motion.div>
@@ -382,7 +382,7 @@ export default function Home() {
               <Link
                 href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2IeIsn89ZwrzAlQV0dnwjgUe7ZbIphty-0fC8xEzR2MOWpk3P4_lfCMyzKUU-EsGYuec7Zxqaf"
                 target="_blank"
-                className="inline-flex items-center justify-center gap-3 bg-primary hover:bg-secondary-foreground text-white font-bold text-lg px-10 py-5 rounded-2xl shadow-xl transition-all hover:-translate-y-1 hover:shadow-2xl"
+                className="inline-flex btn-gradient hover:shadow-2xl items-center justify-center gap-2"
               >
                 Book Your Free Call
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>

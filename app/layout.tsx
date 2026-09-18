@@ -47,7 +47,7 @@ const Footer = () => (
             One free consultation. No jargon. No obligation. Just clarity on what your digital presence needs to actually work for your business.
           </p>
           <div className="w-10 h-[1px] bg-white/20 mb-8"></div>
-          <Link href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2IeIsn89ZwrzAlQV0dnwjgUe7ZbIphty-0fC8xEzR2MOWpk3P4_lfCMyzKUU-EsGYuec7Zxqaf" target='blank' className="btn-gradient">
+          <Link href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2IeIsn89ZwrzAlQV0dnwjgUe7ZbIphty-0fC8xEzR2MOWpk3P4_lfCMyzKUU-EsGYuec7Zxqaf" target='blank' className="btn-gradient inline-flex items-center gap-2">
             <CalendarDays className="w-4 h-4" /> Free Consultation
           </Link>
         </div>
@@ -82,9 +82,9 @@ const Footer = () => (
               <MapPin className="w-4 h-4 shrink-0 mt-0.5 text-white" />
               <span className="leading-relaxed">1st Floor, Ishwar Maya, Old Ginani,<br />Bikaner Fort, Bikaner, Rajasthan 334001</span>
             </div>
-            <a href="mailto:rajeev@neologicx.com" className="flex items-center gap-4 hover:text-primary transition-colors group mt-1">
+            <a href="mailto:support@neologicx.com" className="flex items-center gap-4 hover:text-primary transition-colors group mt-1">
               <Mail className="w-4 h-4 shrink-0 group-hover:text-primary transition-colors text-white" />
-              <span>rajeev@neologicx.com</span>
+              <span>support@neologicx.com</span>
             </a>
           </div>
 

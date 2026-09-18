@@ -60,7 +60,7 @@ export const Navbar = () => {
     <header className="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-border shadow-sm">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center">
-          <Image src="/neo_logo.png" alt="Neologicx Logo" width={160} height={45} className="h-9 w-auto object-contain" />
+          <Image src="/neo_logo.png" alt="Neologicx Logo" width={160} height={45} priority className="h-9 w-auto object-contain" />
         </Link>
 
         {/* Desktop Navigation */}
