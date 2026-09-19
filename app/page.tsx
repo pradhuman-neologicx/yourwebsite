@@ -479,7 +479,7 @@ export default function Home() {
               <em className="text-secondary italic font-serif">— bilkul free</em>
             </h2>
             <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-              Tell us about your business and we'll show you what's possible. No commitment, just a conversation about your growth.
+              One free consultation. No jargon. No obligation. Just clarity on what your digital presence needs to actually work for your business.
             </p>
             <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2IeIsn89ZwrzAlQV0dnwjgUe7ZbIphty-0fC8xEzR2MOWpk3P4_lfCMyzKUU-EsGYuec7Zxqaf" target='blank' className="inline-block bg-white text-brand-dark font-bold text-lg px-10 py-5 rounded-xl hover:bg-secondary hover:text-white transition-all shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95">
               Book your free consultation ↗
