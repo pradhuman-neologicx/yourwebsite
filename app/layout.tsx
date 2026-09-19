@@ -78,10 +78,10 @@ const Footer = () => (
               <MessageCircle className="w-4 h-4 shrink-0 group-hover:text-primary transition-colors text-white" />
               <span>+91-9414138620</span>
             </a>
-            <div className="flex items-start gap-4 mt-1">
-              <MapPin className="w-4 h-4 shrink-0 mt-0.5 text-white" />
+            <a href="https://www.google.com/search?sca_esv=6b1a8cb4301dfb0a&rlz=1C1CHZL_enIN1171IN1171&sxsrf=APpeQnsXKJb114B7cFo5U1uK06N4tg6OIA:1782712977475&q=neologicx+address&ludocid=13292057421446950892&sa=X&ved=2ahUKEwje3oiu46uVAxV4SGwGHSluGGUQ6BN6BAg6EAI" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 mt-1 hover:text-primary transition-colors group">
+              <MapPin className="w-4 h-4 shrink-0 mt-0.5 group-hover:text-primary transition-colors text-white" />
               <span className="leading-relaxed">1st Floor, Ishwar Maya, Old Ginani,<br />Bikaner Fort, Bikaner, Rajasthan 334001</span>
-            </div>
+            </a>
             <a href="mailto:support@neologicx.com" className="flex items-center gap-4 hover:text-primary transition-colors group mt-1">
               <Mail className="w-4 h-4 shrink-0 group-hover:text-primary transition-colors text-white" />
               <span>support@neologicx.com</span>
